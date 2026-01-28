@@ -1,0 +1,310 @@
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.sidebar-header {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+.trip-description {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-style: italic;
+}
+
+.trip-info {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.info-item {
+  margin-bottom: 0.5rem;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.segments-list h3 {
+  margin: 0 0 1rem 0;
+  color: #667eea;
+}
+
+.segment-card {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.2s;
+}
+
+.segment-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+}
+
+.segment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.segment-number {
+  font-weight: 700;
+  color: #667eea;
+  font-size: 1.1rem;
+}
+
+.transport-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.transport-badge.hitchhiking { background: #dbeafe; color: #1e40af; }
+.transport-badge.train { background: #d1fae5; color: #065f46; }
+.transport-badge.bus { background: #fed7aa; color: #92400e; }
+.transport-badge.ferry { background: #e9d5ff; color: #6b21a8; }
+.transport-badge.walk { background: #fee2e2; color: #991b1b; }
+.transport-badge.bike { background: #fce7f3; color: #9f1239; }
+.transport-badge.car { background: #e0e7ff; color: #3730a3; }
+.transport-badge.other { background: #f1f5f9; color: #475569; }
+
+.segment-route {
+  margin: 0.75rem 0;
+}
+
+.route-point {
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+  margin: 0.25rem 0;
+}
+
+.route-arrow {
+  text-align: center;
+  color: #667eea;
+  font-weight: bold;
+  padding: 0.25rem 0;
+}
+
+.segment-time {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0.5rem 0;
+}
+
+.duration {
+  font-weight: 600;
+  color: #667eea;
+  margin-top: 0.25rem;
+}
+
+.segment-distance {
+  font-weight: 600;
+  color: #059669;
+  margin: 0.5rem 0;
+}
+
+.segment-description {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+  font-style: italic;
+  color: #4b5563;
+}
+
+/* Sugestie w sidebarze */
+.suggestion-button-container {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #e5e7eb;
+}
+
+.btn-suggestion {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-suggestion:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.suggestion-form-container {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: #f0fdf4;
+  border: 2px solid #10b981;
+  border-radius: 12px;
+}
+
+.suggestion-form-container h4 {
+  margin: 0 0 1rem 0;
+  color: #065f46;
+}
+
+.suggestion-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.suggestion-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.suggestion-form input,
+.suggestion-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #d1fae5;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.suggestion-form input:focus,
+.suggestion-form textarea:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.btn-cancel {
+  flex: 1;
+  padding: 0.75rem;
+  background: white;
+  color: #6b7280;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-cancel:hover {
+  border-color: #9ca3af;
+  color: #374151;
+}
+
+.btn-submit-suggestion {
+  flex: 1;
+  padding: 0.75rem;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-submit-suggestion:hover:not(:disabled) {
+  background: #059669;
+}
+
+.btn-submit-suggestion:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.success-message {
+  padding: 1rem;
+  background: #d1fae5;
+  color: #065f46;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.error-message {
+  padding: 0.75rem;
+  background: #fee2e2;
+  color: #991b1b;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+  }
+}

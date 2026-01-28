@@ -1,0 +1,102 @@
+.map-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .trip-selector-button {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    z-index: 1000;
+    background: white;
+    border: 2px solid #667eea;
+    border-radius: 12px;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #667eea;
+  }
+  
+  .trip-selector-button:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.3);
+  }
+  
+  .selector-icon {
+    font-size: 1.5rem;
+  }
+  
+  .selector-text {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .selector-arrow {
+    font-size: 0.8rem;
+    transition: transform 0.2s;
+  }
+  
+  .trip-selector-button:hover .selector-arrow {
+    transform: translateY(2px);
+  }
+  
+  .loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .spinner {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #667eea;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  .leaflet-container {
+    font-family: inherit;
+  }
+  
+  .leaflet-popup-content {
+    margin: 0.5rem;
+  }
+  
+  .leaflet-popup-content h3 {
+    color: #667eea;
+  }
+  
+  @media (max-width: 768px) {
+    .trip-selector-button {
+      top: 10px;
+      left: 10px;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  
+    .selector-text {
+      max-width: 150px;
+    }
+  }
